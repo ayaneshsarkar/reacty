@@ -4,7 +4,8 @@ export const createTask = (task) => {
     const firestore = getFirestore();
     firestore.collection('tasks').add({
       ...task,
-      createdAt: new Date()
+      createdAt: new Date(),
+      editedAt: new Date()
     }).then(() => {
       dispatch({type: 'CREATE_TASK_SUCCESS'});
     }).catch(error => {
@@ -14,11 +15,11 @@ export const createTask = (task) => {
 
 };
 
-export const updateTask = (task) => {
+export const updateTask = (task, id) => {
 
   return (dispatch, getState, {getFirestore}) => {
     const firestore = getFirestore();
-    firestore.collection('tasks').doc(task.id).update({
+    firestore.collection('tasks').doc(id).update({
       ...task,
       editedAt: new Date()
     }).then(() => {

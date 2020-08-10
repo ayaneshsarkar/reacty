@@ -23,7 +23,8 @@ class TaskContent extends Component {
   
             <div className="d-flex">
               <Link to={"edittask/" + task.id} className="btn btn-primary mr-3">Edit</Link>
-              <Link to="/" onClick={() => this.taskDelete(task.id)} className="btn btn-danger">Delete</Link>
+              <Link to="/" onClick={() => this.taskDelete(task.id)} className="btn btn-danger mr-3">Delete</Link>
+              <Link to={"task/" + task.id} className="btn btn-dark text-center">Read More <i className="fas fa-arrow-right ml-1"></i></Link>
             </div>
           </div>
         </div>
