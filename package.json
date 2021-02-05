@@ -1,6 +1,6 @@
 {
   "name": "reacty",
-  "homepage": "https://reacty.fullstackayanesh.xyz",
+  "homepage": "http://reacty.fullstackayanesh.xyz.s3-website-us-east-1.amazonaws.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
